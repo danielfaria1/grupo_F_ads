@@ -13,13 +13,21 @@ public class MainScreen extends JFrame {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainScreen);
-        this.setSize(450, 400);
+        this.setSize(550, 500);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         botaListaP.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new ListaProdutosGUI("Lista de produtos");
+                frame.setVisible(true);
+                dispose();
+            }
+        });
+        botaoCadastrarV.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new CadastraVenda("Cadastrar venda");
                 frame.setVisible(true);
                 dispose();
             }

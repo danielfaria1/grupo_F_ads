@@ -11,6 +11,7 @@ public class VendaModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String dataVenda;
 
     @ManyToMany
     Set<ProdutoModel> hasProduto;
